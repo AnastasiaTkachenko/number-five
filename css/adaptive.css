@@ -1,0 +1,238 @@
+@media screen and (max-width: 1229px) {
+    /*1024-1029*/
+    .container {
+        padding: 0 20px;
+
+    }
+
+    .present-block {
+        /*display: none;*/
+    }
+
+    .main-image {
+        width: 400px;
+        height: 400px;
+        bottom: 0;
+        right: 120px;
+    }
+
+    .choose-macaroon-box {
+        grid-template-columns: repeat(2, minmax(100px, 500px));
+        /*grid-template-columns: repeat(auto-fill,300px);*/
+        grid-row-gap: 90px;
+        place-items: center;
+    }
+
+}
+
+
+@media screen and (max-width: 1023px) {
+    /*768-1023*/
+    .picture-block {
+        order: 2;
+    }
+
+    .main {
+        padding: 80px 0 500px 0;
+    }
+
+    .main-image {
+        bottom: -240px;
+        right: 188px;
+    }
+
+    .big-macaroon .container {
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .macaroon-text {
+        text-align: center;
+    }
+
+    .macaroon-text p {
+        margin: 0 auto 45px auto;
+        max-width: 660px;
+
+
+    }
+
+    .macaroon-header {
+        margin: 0 auto 60px auto;
+    }
+
+    .advantage-number {
+        margin-bottom: 13px;
+    }
+
+    .macaroon-image {
+        text-align: center;
+    }
+
+    .advantages-block {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 85px;
+    }
+
+    .container .advantages-block {
+        padding: 0 144px;
+    }
+
+    .order-macaroon .container {
+        align-items: self-end;
+    }
+
+    .macaroon-left {
+        position: absolute;
+        bottom: -90px;
+        left: -50px;
+
+    }
+
+    .picture-block {
+        position: relative;
+    }
+
+    .strawberry-right {
+        top: 0;
+        right: -190px
+    }
+
+    .strawberry-left {
+        top: -376px;
+        left: -34px;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    /*425-767*/
+    .main .container {
+        display: block;
+    }
+
+
+    .main {
+        padding: 80px 0 30px 0;
+    }
+
+    .main-text {
+        text-align: center;
+    }
+
+    .main-image {
+        bottom: 0;
+        left: 0;
+        text-align: center;
+
+    }
+
+    .main-image img {
+        width: 300px;
+        height: auto;
+        margin-top: 38px;
+    }
+
+    .macaroon-image img {
+        width: 400px;
+    }
+
+    .advantages-block {
+        grid-template-columns: repeat(2, auto);
+
+    }
+
+    .container .advantages-block {
+        padding: 0;
+    }
+
+    .choose-macaroon-box {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 100px;
+    }
+
+    .macaroon-left {
+        display: none;
+    }
+
+    .footer .container {
+        display: block;
+        text-align: center;
+    }
+
+    .strawberry-right {
+        display: none;
+    }
+
+    .footer-social {
+        order: 3;
+        margin-bottom: 20px;
+    }
+
+    .footer-phone {
+        order: 2;
+    }
+
+    .footer.text p {
+        order: 4;
+        margin-bottom: 20px;
+    }
+
+    .footer-text img {
+        order: 1;
+    }
+
+    .main-image::before {
+        display: none;
+    }
+
+    .main-image::after {
+        display: none;
+    }
+
+    .nav {
+        display: none;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 0;
+        margin: 0;
+        background: rgba(0, 0, 0, 0.86);
+
+    }
+
+    .nav ul {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 auto;
+
+    }
+
+    .nav ul li {
+        margin: 15px 0;
+    }
+
+    .nav ul li {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .burger {
+        display: block;
+    }
+
+
+}
+
+
+@media screen and (max-width: 375px) {
+    .macaroon-image img {
+        width: 300px;
+    }
+
+    .strawberry-left {
+      display:none;
+    }
+}

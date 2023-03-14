@@ -2,7 +2,6 @@
     /*1024-1029*/
     .container {
         padding: 0 20px;
-
     }
 
     .present-block {
@@ -23,11 +22,26 @@
         place-items: center;
     }
 
+    .advantages-block {
+        grid-column-gap: 36px;
+        justify-content: center;
+    }
 }
 
 
 @media screen and (max-width: 1023px) {
     /*768-1023*/
+    .advantages-block {
+        grid-template-columns: repeat(2, minmax(min-content, 219px));
+        grid-column-gap: 54px;
+        grid-row-gap: 80px;
+    }
+
+    .advantage {
+        text-align: -webkit-center;
+        text-align: -moz-center;
+    }
+
     .picture-block {
         order: 2;
     }
@@ -54,7 +68,6 @@
     .macaroon-text p {
         margin: 0 auto 45px auto;
         max-width: 660px;
-
 
     }
 
@@ -109,9 +122,30 @@
 @media screen and (max-width: 767px) {
     /*425-767*/
     .main .container {
-        display: block;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
+    .header .container {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .phone {
+        display: none;
+    }
+
+    .link-item a {
+        color: #d2d2d2;
+        font-size: 25px;
+        text-transform: uppercase;
+    }
+
+    .about-info {
+        grid-column-gap: 15px;
+        grid-row-gap: 36px;
+    }
 
     .main {
         padding: 80px 0 30px 0;
@@ -119,6 +153,10 @@
 
     .main-text {
         text-align: center;
+    }
+
+    .main-text p {
+        max-width: 600px;
     }
 
     .main-image {
@@ -143,6 +181,7 @@
 
     }
 
+
     .container .advantages-block {
         padding: 0;
     }
@@ -157,12 +196,21 @@
     }
 
     .footer .container {
-        display: block;
-        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+
     }
 
     .strawberry-right {
         display: none;
+    }
+
+    .footer-logo {
+        order: 1;
+    }
+
+    .footer-phone {
+        order: 2;
     }
 
     .footer-social {
@@ -170,25 +218,9 @@
         margin-bottom: 20px;
     }
 
-    .footer-phone {
-        order: 2;
-    }
-
-    .footer.text p {
+    .rights {
         order: 4;
         margin-bottom: 20px;
-    }
-
-    .footer-text img {
-        order: 1;
-    }
-
-    .main-image::before {
-        display: none;
-    }
-
-    .main-image::after {
-        display: none;
     }
 
     .nav {
@@ -199,7 +231,8 @@
         top: 0;
         right: 0;
         margin: 0;
-        background: rgba(0, 0, 0, 0.86);
+        background: rgb(66, 18, 31,0.86);
+        z-index: 1000 !important;
 
     }
 
@@ -223,7 +256,30 @@
         display: block;
     }
 
+    body {
+        overflow-x: hidden;
+    }
 
+    .nav.open {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav .close {
+        display: block;
+        width: 24px;
+        height: 24px;
+        fill: #d2d2d2;;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: -1000;
+    }
+
+    .main-image img {
+        overflow: hidden;
+    }
 }
 
 
@@ -233,6 +289,17 @@
     }
 
     .strawberry-left {
-      display:none;
+        top: -468px;
+        left: -126px;
     }
+
+    input {
+        width: 325px;
+    }
+
+    .btn.btn-order-section {
+        width: 325px;
+    }
+
+
 }

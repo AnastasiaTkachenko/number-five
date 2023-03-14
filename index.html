@@ -12,23 +12,23 @@
 <body>
 <header class="header">
     <div class="container">
+        <div class="logo">
+            <img src="images/logo.png" alt="logo">
+        </div>
         <div class="burger" id="burger">
             <svg
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
                     width="40px" height="22px">
-                <path fill-rule="evenodd"  fill="rgb(130, 19, 40)"
+                <path fill-rule="evenodd" fill="rgb(130, 19, 40)"
                       d="M0.000,-0.000 L39.1000,-0.000 L39.1000,1.1000 L0.000,1.1000 L0.000,-0.000 Z"/>
-                <path fill-rule="evenodd"  fill="rgb(130, 19, 40)"
+                <path fill-rule="evenodd" fill="rgb(130, 19, 40)"
                       d="M0.000,10.000 L39.1000,10.000 L39.1000,12.000 L0.000,12.000 L0.000,10.000 Z"/>
-                <path fill-rule="evenodd"  fill="rgb(130, 19, 40)"
+                <path fill-rule="evenodd" fill="rgb(130, 19, 40)"
                       d="M0.000,19.1000 L39.1000,19.1000 L39.1000,21.1000 L0.000,21.1000 L0.000,19.1000 Z"/>
             </svg>
         </div>
         <nav class="nav" id="nav">
-            <div class="logo">
-                <img src="images/logo.png" alt="logo">
-            </div>
             <div class="close" id="close">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -48,19 +48,25 @@
             </div>
             <ul>
                 <li class="link-item">
-                    <a href="">Cakes</a>
+                    <a href="#cakes">Cakes</a>
                 </li>
                 <li class="link-item">
                     <a href="">About us</a>
                 </li>
                 <li class="link-item">
-                    <a href="">Make order</a>
+                    <a href="#order">Make order</a>
                 </li>
+
+<!--                <li class="link-item mobile">-->
+<!--                    <a href="">+375 (29) 368-98-68</a>-->
+<!--                </li>-->
+
             </ul>
-            <div class="phone">
-                <a href="tel:375293689868">+375 (29) 368-98-68</a>
-            </div>
+
         </nav>
+        <div class="phone">
+            <a href="tel:375293689868">+375 (29) 368-98-68</a>
+        </div>
     </div>
 </header>
 <section class="main">
@@ -134,7 +140,7 @@
         </div>
     </div>
 </section>
-<section class="choose-macaroon">
+<section class="choose-macaroon" id="cakes">
     <div class="container">
         <h3 class="choose-macaroon-header">Choose your macaroon</h3>
         <div class="choose-macaroon-box">
@@ -189,7 +195,7 @@
         </div>
     </div>
 </section>
-<section class="order-macaroon">
+<section class="order-macaroon" id="order">
     <div class="container">
         <div class="picture-block">
             <img src="images/macaroon-left.png" class="macaroon-left" alt="macaroon">
@@ -214,12 +220,14 @@
 </section>
 <footer class="footer">
     <div class="container">
-        <div class="footer-text">
-            <img src="images/logo.png" alt="logo">
-            <p>All rights reserved 2023</p>
+        <div class="wrapper">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <div class="rights">All rights reserved 2023</div>
         </div>
         <div class="footer-social">
-            <a href=""><img src="images/insta.png" alt="@media screen and (max-width: 1229px) {insta"> </a>
+            <a href=""><img src="images/insta.png" alt="insta"> </a>
             <p>We are in instagram</p>
         </div>
         <div class="footer-phone">
@@ -236,5 +244,20 @@
         <img src="images/present.png" alt="present">
     </div>
 </div>
+<script>
+    document.getElementById('burger').onclick = function () {
+        document.getElementById('nav').classList.add('open')
+    }
+
+    document.querySelectorAll('nav *').forEach((item) => {
+        item.onclick = () => {
+            document.getElementById('nav').classList.remove('open');
+        }
+    })
+    document.getElementById('close').onclick = function () {
+        document.getElementById('nav').classList.remove('open')
+    }
+
+</script>
 </body>
 </html>

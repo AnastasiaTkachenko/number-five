@@ -33,7 +33,6 @@
 }
 
 
-
 .container {
     max-width: 1140px;
     margin: 0 auto;
@@ -49,25 +48,25 @@ a {
     background-color: rgb(235, 168, 177);
     padding: 38px 0 25px 0;
     position: sticky;
-    top:0;
-    z-index:10001;
+    top: 0;
+    z-index: 10001;
 }
 
-/*.nav {*/
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*    align-items: center;*/
-/*}*/
 
 .header .container {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 ul {
     display: flex;
     width: 314px;
     justify-content: space-between;
+}
+
+.main {
+    overflow: hidden;
 }
 
 .link-item {
@@ -240,9 +239,9 @@ ul {
     /*display: grid;*/
     /*grid-template-columns: repeat(4, 1fr);*/
     /*grid-column-gap: 94px;*/
-    display:grid;
-    grid-template-columns: repeat(auto-fill,minmax(min-content,219px));
-    grid-column-gap:88px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min-content, 219px));
+    grid-column-gap: 88px;
 }
 
 .advantage-number {
@@ -257,7 +256,7 @@ ul {
     height: 70px;
     position: relative;
     transition: all .3s linear;
-    margin-bottom:12px;
+    margin-bottom: 12px;
 }
 
 .number {
@@ -468,16 +467,22 @@ input::placeholder {
 }
 
 .footer .container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    /*grid-template-columns: repeat(3, 1fr);*/
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: minmax(30px, 40px) minmax(min-content, max-content);
     align-items: center;
 }
 
-.rights{
+.footer-phone {
+    justify-self: end;
+}
+
+.rights {
     font-size: 12px;
     font-family: "Gilroy", sans-serif;
     color: rgb(227, 172, 180);
-    margin-top: 19px;
+    order: 2;
 }
 
 .footer-social p {
@@ -500,8 +505,9 @@ input::placeholder {
 }
 
 .wrapper {
-    display:block;
+    display: block;
 }
+
 /*present*/
 
 .present {
